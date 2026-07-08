@@ -10,6 +10,10 @@ interface Project {
   title: string;
   description: string;
   status: string;
+  technologies: string[];
+  repoUrl: string;
+  liveUrl?: string;
+  note?: string;
 }
 
 @Component({
@@ -22,9 +26,9 @@ export class App {
   readonly name = 'Németh Máté';
   readonly role = 'Junior Frontend fejlesztő';
   readonly intro =
-    'Környezetbarát, modern és jól használható webes felületeket építek, miközben folyamatosan fejlődök a frontend fejlesztés területén.';
+    'Letisztult, reszponzív és jól használható frontend felületeket építek, miközben folyamatosan mélyítem a tudásomat Angularban, Reactben és TypeScriptben.';
   readonly aboutText =
-    'Junior frontend fejlesztőként a tiszta architektúra, a jól strukturált kód és a gördülékeny felhasználói élmény a fő prioritásom. Az Angular, React, TypeScript és a modern webes alapok terén dolgozom, és folyamatosan bővítem tudásomat a minőségi, megbízható megoldások felé.';
+    'Junior frontend fejlesztőként számomra a tiszta architektúra, az átgondolt komponensstruktúra és a megbízható felhasználói élmény a legfontosabb. Olyan projekteken dolgozom, ahol a modern frontend alapokat gyakorlati megoldásokkal kapcsolhatom össze, és minden munkával tudatosan fejlődhetek tovább.';
   readonly skillGroups: SkillGroup[] = [
     {
       title: 'Frontend alapok',
@@ -44,22 +48,28 @@ export class App {
     },
     {
       title: 'Build eszközök és tesztelés',
-      items: ['Webpack', 'Jest']
+      items: ['Angular CLI', 'npm', 'Vitest']
     }
   ];
   readonly projects: Project[] = [
     {
       title: 'Colibri Italdiszkont',
-      description: 'Teljesen funkcionális e-commerce weboldal egy családi italdiszkontnak. Dinamikus termékkezelés, szűrési lehetőségek, akciók és Google Maps integrációval.',
-      status: 'Véglegesített'
+      description: 'E-commerce szemléletű weboldal egy családi italdiszkont számára, dinamikus termékkatalógussal, szűréssel, kiemelt akciókkal és Google Maps integrációval.',
+      status: 'Fejlesztés alatt',
+      technologies: ['HTML5', 'CSS3', 'JavaScript', 'JSON', 'Google Maps API'],
+      repoUrl: 'https://github.com/nmthmate/colibri-web',
+      note: 'Az élő demó jelenleg nincs publikálva, a forráskód már elérhető.'
     },
     {
       title: 'FrontLine Studio',
-      description: 'Régi projektből származó web design stúdió weboldala. Bootstrap és custom CSS alapokon, amely bemutatja tanulási folyamatomat a web design kezdeteiben.',
-      status: 'Archivált'
+      description: 'Korai tanulóprojektem egy web design stúdió számára. Bootstrapre és egyedi CSS-re épül, és jól mutatja, honnan indult a frontend iránti érdeklődésem.',
+      status: 'Archivált',
+      technologies: ['HTML5', 'CSS3', 'Bootstrap 5'],
+      repoUrl: 'https://github.com/nmthmate/frontline-studio',
+      note: 'Korai referencia, amely a fejlődési utamat dokumentálja.'
     }
   ];
-  readonly focusPoints = ['Angular', 'TypeScript', 'Felhasználóközpontú UX'];
+  readonly focusPoints = ['Angular', 'TypeScript', 'Reszponzív UI'];
   readonly contactEmail = 'matepataky@gmail.com';
   readonly socialLinks = {
     github: 'https://github.com/nmthmate',

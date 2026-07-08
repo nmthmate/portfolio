@@ -2,7 +2,7 @@
   <a class="brand" href="#home">{{ name }}</a>
   <nav class="site-nav" aria-label="Fő navigáció">
     <a href="#about">Rólam</a>
-    <a href="#skills">Skill-ek</a>
+    <a href="#skills">Technológiák</a>
     <a href="#projects">Projektek</a>
     <a href="#contact">Kapcsolat</a>
   </nav>
@@ -12,11 +12,11 @@
   <section class="hero">
     <div class="hero-copy">
       <p class="eyebrow">{{ role }}</p>
-      <h1>Modern, professzionális webes felületek fejlesztése egy dinamikusan fejlődő junior frontend fejlesztőtől.</h1>
+      <h1>Modern, reszponzív frontend felületek Angularral, Reacttel és TypeScripttel.</h1>
       <p class="intro">{{ intro }}</p>
       <div class="cta-row">
-        <a class="button primary" href="#projects">Tekintse meg a projektjeimet</a>
-        <a class="button secondary" href="#contact">Vegye fel velem a kapcsolatot</a>
+        <a class="button primary" href="#projects">Projektjeim megtekintése</a>
+        <a class="button secondary" href="#contact">Kapcsolatfelvétel</a>
       </div>
       <div class="focus-list" aria-label="Fő fókuszok">
         @for (item of focusPoints; track item) {
@@ -28,9 +28,9 @@
     <aside class="hero-card">
       <p class="card-label">Fő fókuszok</p>
       <ul>
-        <li>Reszponzív, vállalati szintű frontend megoldások</li>
-        <li>Angular és React alapú alkalmazások</li>
-        <li>Skálázható, testreszabható és megbízható felületépítés</li>
+        <li>Reszponzív felületek mobilra és desktopra</li>
+        <li>Angular- és React-alapú frontend projektek</li>
+        <li>Átlátható, jól karbantartható komponensstruktúra</li>
       </ul>
     </aside>
   </section>
@@ -38,7 +38,7 @@
   <section id="about" class="section about-section">
     <div class="section-heading">
       <p class="eyebrow">Rólam</p>
-      <h2>Junior frontend fejlesztő, aki a részletekre figyel, és gyorsan tanul.</h2>
+      <h2>Junior frontend fejlesztő, aki a tiszta megoldásokat és a jó felhasználói élményt keresi.</h2>
     </div>
 
     <div class="about-grid">
@@ -59,7 +59,7 @@
 
   <section id="skills" class="section">
     <div class="section-heading">
-      <p class="eyebrow">Tech Stack</p>
+      <p class="eyebrow">Technológiák</p>
       <h2>Az általam használt technológiák és eszközök</h2>
     </div>
     <div class="skill-grid">
@@ -89,6 +89,34 @@
             <p class="project-status">{{ project.status }}</p>
             <h3>{{ project.title }}</h3>
             <p>{{ project.description }}</p>
+            <div class="project-tech-list" [attr.aria-label]="project.title + ' technológiák'">
+              @for (technology of project.technologies; track technology) {
+                <span class="skill-tag project-tech-tag">{{ technology }}</span>
+              }
+            </div>
+            <div class="project-actions">
+              @if (project.liveUrl) {
+                <a
+                  class="button primary small"
+                  [href]="project.liveUrl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Élő demó
+                </a>
+              }
+              <a
+                class="button secondary small"
+                [href]="project.repoUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Forráskód
+              </a>
+            </div>
+            @if (project.note) {
+              <p class="project-note">{{ project.note }}</p>
+            }
           </article>
         }
       </div>
