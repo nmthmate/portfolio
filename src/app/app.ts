@@ -31,24 +31,38 @@ export class App {
     'Junior frontend fejlesztőként számomra a tiszta architektúra, az átgondolt komponensstruktúra és a megbízható felhasználói élmény a legfontosabb. Olyan projekteken dolgozom, ahol a modern frontend alapokat gyakorlati megoldásokkal kapcsolhatom össze, és minden munkával tudatosan fejlődhetek tovább.';
   readonly skillGroups: SkillGroup[] = [
     {
-      title: 'Frontend alapok',
-      items: ['HTML', 'CSS', 'SCSS / Sass', 'JavaScript', 'TypeScript', 'SEO']
+      title: 'Frontend és UI',
+      items: [
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'Angular',
+        'React',
+        'Felhasználói felületek tervezési szempontjai',
+        'SEO'
+      ]
     },
     {
-      title: 'Frontend keretrendszerek és UI',
-      items: ['Angular', 'React', 'Bootstrap']
+      title: 'Fejlesztési eszközök és integráció',
+      items: [
+        'Node.js',
+        'Jest',
+        'Webpack',
+        'Firebase',
+        'REST',
+        'NoSQL alapok',
+        'JavaScript - NoSQL integráció',
+        'Verziókövetés, csapatmunka módszerek, GitHub'
+      ]
     },
     {
-      title: 'Backend',
-      items: ['Node.js', 'REST API']
-    },
-    {
-      title: 'Adatbázis és felhőszolgáltatások',
-      items: ['MongoDB', 'Firebase']
-    },
-    {
-      title: 'Build eszközök és tesztelés',
-      items: ['Angular CLI', 'npm', 'Vitest']
+      title: 'IT és hálózati háttér',
+      items: [
+        'Általános IT ismeret',
+        'Internetes biztonság',
+        'Hálózati alapismeretek',
+        'Rendszerüzemeltetési alapok'
+      ]
     }
   ];
   readonly projects: Project[] = [

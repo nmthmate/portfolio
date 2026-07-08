@@ -2,7 +2,7 @@
   <a class="brand" href="#home">{{ name }}</a>
   <nav class="site-nav" aria-label="Fő navigáció">
     <a href="#about">Rólam</a>
-    <a href="#skills">Technológiák</a>
+    <a href="#skills">Skills</a>
     <a href="#projects">Projektek</a>
     <a href="#contact">Kapcsolat</a>
   </nav>
@@ -51,7 +51,7 @@
           <li>Jól strukturált, tiszta és karbantartható kód</li>
           <li>Felhasználóbarát, reszponzív felületek</li>
           <li>Üzleti célokat támogató, gyors és megbízható webalkalmazások</li>
-          <li>Részletgazdag, precíz munkavégzés</li>
+          <li>Infokommunikációs hálózatépítő és üzemeltető technikusi háttér</li>
         </ul>
       </div>
     </div>
@@ -59,18 +59,18 @@
 
   <section id="skills" class="section">
     <div class="section-heading">
-      <p class="eyebrow">Technológiák</p>
-      <h2>Az általam használt technológiák és eszközök</h2>
+      <p class="eyebrow">Skills</p>
+      <h2>Az általam ismert technológiák és szakmai területek</h2>
     </div>
     <div class="skill-grid">
       @for (group of skillGroups; track group.title) {
         <article class="skill-card">
           <h3>{{ group.title }}</h3>
-          <div class="skill-tags">
+          <ul class="skill-list">
             @for (skill of group.items; track skill) {
-              <span class="skill-tag">{{ skill }}</span>
+              <li>{{ skill }}</li>
             }
-          </div>
+          </ul>
         </article>
       }
     </div>

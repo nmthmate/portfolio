@@ -107,10 +107,6 @@
   color: #07111f;
 }
 
-.button.primary:hover {
-  box-shadow: 0 12px 28px rgba(110, 231, 255, 0.24);
-}
-
 .button.secondary {
   border: 1px solid rgba(255, 255, 255, 0.16);
   color: #fff;
@@ -215,12 +211,6 @@
   margin: 0;
 }
 
-.skill-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-}
-
 .skill-tag {
   display: inline-flex;
   align-items: center;
@@ -230,6 +220,18 @@
   color: #e8f0ff;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.skill-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.55rem;
+  color: rgba(231, 237, 247, 0.86);
+}
+
+.skill-list li::marker {
+  color: #8ad4ff;
 }
 
 .project-status {
@@ -259,10 +261,6 @@
 .project-note {
   font-size: 0.94rem;
   color: rgba(231, 237, 247, 0.72);
-}
-
-.placeholder-card {
-  text-align: left;
 }
 
 .contact-card {
