@@ -51,6 +51,11 @@ export class App {
       title: 'Colibri Italdiszkont',
       description: 'Teljesen funkcionális e-commerce weboldal egy családi italdiszkontnak. Dinamikus termékkezelés, szűrési lehetőségek, akciók és Google Maps integrációval.',
       status: 'Véglegesített'
+    },
+    {
+      title: 'FrontLine Studio',
+      description: 'Régi projektből származó web design stúdió weboldala. Bootstrap és custom CSS alapokon, amely bemutatja tanulási folyamatomat a web design kezdeteiben.',
+      status: 'Archivált'
     }
   ];
   readonly focusPoints = ['Angular', 'TypeScript', 'Felhasználóközpontú UX'];
