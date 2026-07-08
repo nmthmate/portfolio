@@ -1,0 +1,120 @@
+<header class="site-header">
+  <a class="brand" href="#home">{{ name }}</a>
+  <nav class="site-nav" aria-label="Fő navigáció">
+    <a href="#about">Rólam</a>
+    <a href="#skills">Skill-ek</a>
+    <a href="#projects">Projektek</a>
+    <a href="#contact">Kapcsolat</a>
+  </nav>
+</header>
+
+<main id="home" class="page-shell">
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">{{ role }}</p>
+      <h1>Modern, professzionális webes felületek fejlesztése egy dinamikusan fejlődő junior frontend fejlesztőtől.</h1>
+      <p class="intro">{{ intro }}</p>
+      <div class="cta-row">
+        <a class="button primary" href="#projects">Tekintse meg a projektjeimet</a>
+        <a class="button secondary" href="#contact">Vegye fel velem a kapcsolatot</a>
+      </div>
+      <div class="focus-list" aria-label="Fő fókuszok">
+        @for (item of focusPoints; track item) {
+          <span class="focus-pill">{{ item }}</span>
+        }
+      </div>
+    </div>
+
+    <aside class="hero-card">
+      <p class="card-label">Fő fókuszok</p>
+      <ul>
+        <li>Reszponzív, vállalati szintű frontend megoldások</li>
+        <li>Angular és React alapú alkalmazások</li>
+        <li>Skálázható, testreszabható és megbízható felületépítés</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section id="about" class="section about-section">
+    <div class="section-heading">
+      <p class="eyebrow">Rólam</p>
+      <h2>Junior frontend fejlesztő, aki a részletekre figyel, és gyorsan tanul.</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-card">
+        <p class="section-text">{{ aboutText }}</p>
+      </div>
+      <div class="about-card about-highlights">
+        <h3>Mit hozok a munkába</h3>
+        <ul>
+          <li>Jól strukturált, tiszta és karbantartható kód</li>
+          <li>Felhasználóbarát, reszponzív felületek</li>
+          <li>Üzleti célokat támogató, gyors és megbízható webalkalmazások</li>
+          <li>Részletgazdag, precíz munkavégzés</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="section-heading">
+      <p class="eyebrow">Tech Stack</p>
+      <h2>Az általam használt technológiák és eszközök</h2>
+    </div>
+    <div class="skill-grid">
+      @for (group of skillGroups; track group.title) {
+        <article class="skill-card">
+          <h3>{{ group.title }}</h3>
+          <div class="skill-tags">
+            @for (skill of group.items; track skill) {
+              <span class="skill-tag">{{ skill }}</span>
+            }
+          </div>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="section-heading">
+      <p class="eyebrow">Projektek</p>
+      <h2>Projektjeim és referenciáim</h2>
+    </div>
+
+    @if (projects.length) {
+      <div class="project-grid">
+        @for (project of projects; track project.title) {
+          <article class="project-card">
+            <p class="project-status">{{ project.status }}</p>
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.description }}</p>
+          </article>
+        }
+      </div>
+    } @else {
+      <div class="placeholder-card">
+        <p>A projektlista jelenleg még nem tartalmaz referenciákat. A későbbiekben itt jelennek meg a legfontosabb munkáim és megoldásaim.</p>
+      </div>
+    }
+  </section>
+
+  <section id="contact" class="section contact-section">
+    <div class="section-heading">
+      <p class="eyebrow">Kapcsolat</p>
+      <h2>Kapcsolat</h2>
+    </div>
+
+    <div class="contact-card">
+      <a class="contact-link" [href]="'mailto:' + contactEmail">{{ contactEmail }}</a>
+      <div class="contact-links">
+        <a [href]="socialLinks.github" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a [href]="socialLinks.linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© {{ currentYear }} {{ name }}. Minden jog fenntartva.</p>
+</footer>
