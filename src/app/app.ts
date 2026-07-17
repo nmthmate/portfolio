@@ -67,6 +67,15 @@ export class App {
   ];
   readonly projects: Project[] = [
     {
+      title: 'Coworking Booking',
+      description: 'Szoba-/tárgyalófoglaló alkalmazás coworking irodák számára. Bejelentkezett felhasználók megnézhetik a termeket, óránkénti bontásban lefoglalhatnak egy szabad időpontot, és kezelhetik a saját foglalásaikat.',
+      status: 'Kész, publikálva',
+      technologies: ['React', 'TypeScript', 'Firebase', 'Tailwind CSS', 'TanStack Query'],
+      repoUrl: 'https://github.com/nmthmate/coworking-booking',
+      liveUrl: 'https://coworking-booking-95b46.web.app',
+      note: 'Firestore tranzakcióval védett foglalási logika, dupla foglalás elleni védelemmel.'
+    },
+    {
       title: 'Colibri Italdiszkont',
       description: 'E-commerce szemléletű weboldal egy családi italdiszkont számára, dinamikus termékkatalógussal, szűréssel, kiemelt akciókkal és Google Maps integrációval.',
       status: 'Fejlesztés alatt',
