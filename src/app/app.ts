@@ -77,11 +77,12 @@ export class App {
     },
     {
       title: 'Colibri Italdiszkont',
-      description: 'E-commerce szemléletű weboldal egy családi italdiszkont számára, dinamikus termékkatalógussal, szűréssel, kiemelt akciókkal és Google Maps integrációval.',
-      status: 'Fejlesztés alatt',
-      technologies: ['HTML5', 'CSS3', 'JavaScript', 'JSON', 'Google Maps API'],
-      repoUrl: 'https://github.com/nmthmate/colibri-web',
-      note: 'Az élő demó jelenleg nincs publikálva, a forráskód már elérhető.'
+      description: 'Weboldal egy családi italdiszkont számára Angularban, Firebase/Firestore háttérrel: dinamikus termékkatalógus kereséssel és szűréssel, valamint egy külön admin felület, ahol a tulajdonos bejelentkezve önállóan frissítheti a termékeket, akciókat és a főoldali kiemeléseket.',
+      status: 'Kész, publikálva',
+      technologies: ['Angular', 'TypeScript', 'Firebase', 'Firestore', 'CI/CD'],
+      repoUrl: 'https://github.com/nmthmate/colibri-web-angular',
+      liveUrl: 'https://nmthmate.github.io/colibri-web-angular/',
+      note: 'Admin felület lazy-loadolva, hogy a publikus oldal gyors maradjon; automatizált tesztekkel és GitHub Actions CI/CD-vel.'
     },
     {
       title: 'FrontLine Studio',
