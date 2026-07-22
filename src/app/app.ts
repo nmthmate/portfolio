@@ -67,6 +67,15 @@ export class App {
   ];
   readonly projects: Project[] = [
     {
+      title: 'Weather App',
+      description: 'Időjárás-alkalmazás, amely megmutatja az aktuális időjárást a felhasználó helyén vagy egy keresett városban, 24 órás bontású és 7 napos előrejelzéssel. Progresszív webalkalmazásként (PWA) telepíthető a telefon kezdőképernyőjére.',
+      status: 'Kész, publikálva',
+      technologies: ['HTML5', 'CSS3', 'JavaScript', 'PWA', 'Open-Meteo API'],
+      repoUrl: 'https://github.com/nmthmate/weather-app',
+      liveUrl: 'https://nmthmate.github.io/weather-app/',
+      note: 'Világos/sötét témaváltás, helymeghatározási engedélykéréssel; ennek hiányában az utoljára keresett városra, majd Budapestre esik vissza.'
+    },
+    {
       title: 'Coworking Booking',
       description: 'Szoba-/tárgyalófoglaló alkalmazás coworking irodák számára. Bejelentkezett felhasználók megnézhetik a termeket, óránkénti bontásban lefoglalhatnak egy szabad időpontot, és kezelhetik a saját foglalásaikat.',
       status: 'Kész, publikálva',
