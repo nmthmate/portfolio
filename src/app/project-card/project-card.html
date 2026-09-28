@@ -1,0 +1,70 @@
+<article class="project" [attr.aria-labelledby]="project().id + '-title'">
+  <!-- Desktop screenshot with the phone on top, or only the phone if there's no desktop one. -->
+  <div
+    class="project-media"
+    [class.project-media--phone-only]="!project().desktopImage"
+    [attr.data-project]="project().id"
+  >
+    @if (project().desktopImage; as image) {
+      <img
+        class="shot shot-desktop"
+        [src]="image.src"
+        [width]="image.width"
+        [height]="image.height"
+        [alt]="image.alt"
+        loading="lazy"
+        decoding="async"
+      />
+    }
+    <img
+      class="shot shot-mobile"
+      [src]="project().mobileImage.src"
+      [width]="project().mobileImage.width"
+      [height]="project().mobileImage.height"
+      [alt]="project().mobileImage.alt"
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
+
+  <div class="project-body">
+    <h3 [id]="project().id + '-title'">{{ project().title }}</h3>
+    <p class="project-summary">{{ project().summary }}</p>
+    <p class="project-description">{{ project().description }}</p>
+
+    <ul class="highlights">
+      @for (highlight of project().highlights; track highlight) {
+        <li>{{ highlight }}</li>
+      }
+    </ul>
+
+    <ul class="tech" aria-label="Felhasznált technológiák">
+      @for (technology of project().technologies; track technology) {
+        <li>{{ technology }}</li>
+      }
+    </ul>
+
+    <p class="project-links">
+      <a
+        class="btn btn-primary btn-small"
+        [href]="project().liveUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Élő oldal <span aria-hidden="true">↗</span>
+      </a>
+      <a
+        class="btn btn-secondary btn-small"
+        [href]="project().repoUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Forráskód <span aria-hidden="true">↗</span>
+      </a>
+    </p>
+
+    @if (project().note) {
+      <p class="project-note">{{ project().note }}</p>
+    }
+  </div>
+</article>
