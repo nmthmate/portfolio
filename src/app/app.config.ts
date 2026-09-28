@@ -1,13 +1,7 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
-import { provideRouter } from '@angular/router';
-import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
-import { routes } from './app.routes';
-
+// No router: it's a single page and the menu only scrolls to sections (#projektek etc.).
+// With the router (and hash routing) every menu click threw a "Cannot match any routes" error.
 export const appConfig: ApplicationConfig = {
-  providers: [
-    provideBrowserGlobalErrorListeners(),
-    provideRouter(routes),
-    { provide: LocationStrategy, useClass: HashLocationStrategy }
-  ]
+  providers: [provideBrowserGlobalErrorListeners()],
 };
