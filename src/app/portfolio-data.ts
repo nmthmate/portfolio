@@ -43,7 +43,7 @@ export const facts: Fact[] = [
   // \u00a0 is a non-breaking space, so "-üzemeltető" never starts a new line on its own.
   { label: 'Végzettség', value: 'Hálózatépítő és\u00a0-üzemeltető technikus' },
   { label: 'Képzés', value: 'Junior frontend fejlesztő, Masterfield (2026)' },
-  { label: 'Nyelv', value: 'Angol, középszint' },
+  { label: 'Nyelv', value: 'Angol (B2)' },
 ];
 
 // The order here is the order on the page.
